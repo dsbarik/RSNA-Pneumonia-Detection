@@ -17,7 +17,7 @@ USE_PNG = True  # Whether to use PNG images instead of DICOM
 
 IMG_SIZE = 224
 
-TRANSFORM_MODE = "standard" # options: "standard", "imagenet"
+TRANSFORM_MODE = "imagenet" # options: "standard", "imagenet"
 
 NORMALIZATION_STATS = {
     "standard": {
@@ -39,14 +39,14 @@ ROTATE_LIMIT = 15
 # ===============================
 TRAIN_BATCH_SIZE = 8
 VAL_BATCH_SIZE = 16
-EPOCHS = 5
+EPOCHS = 10
 LR = 1e-3
 
 # ===============================
 # Model
 # ===============================
 # Options: "baseline", "small_resnet", "hybrid_cnn", "cnn_v2", "resnet18", "resnet50"
-MODEL_NAME = "baseline"
+MODEL_NAME = "resnet18"
 NUM_OUTPUTS = 1
 
 # ===============================
