@@ -15,6 +15,8 @@ from utils.metrics import get_metrics
 warnings.filterwarnings("ignore")
 
 def get_device():
+    if config.DEVICE == "cuda" and torch.cuda.is_available():
+        return torch.device("cuda")
     if config.DEVICE == "mps" and torch.backends.mps.is_available():
         return torch.device("mps")
     return torch.device("cpu")
