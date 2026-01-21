@@ -1,0 +1,8 @@
+{
+  "best_metric": 0.6797385811805725,
+  "best_epoch": 3,
+  "last_epoch": 5,
+  "metric_name": "f1-score",
+  "mode": "max",
+  "update_at": "2026-01-21T08:23:54.509219"
+}

@@ -1,0 +1,8 @@
+model_name: baseline
+metric_name: f1-score
+mode: max
+# Training parameters
+LR: 0.001
+BATCH_SIZE: 8
+EPOCHS: 10
+DEVICE: mps
