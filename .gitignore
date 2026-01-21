@@ -3,3 +3,5 @@ rsna_dataset
 *.zip
 chest_xray
 ipynb-files
+# checkpoints
+*.pt
