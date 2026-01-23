@@ -1,0 +1,4 @@
+{
+  "LR": 0.001,
+  "TRAIN_BATCH_SIZE": 8
+}

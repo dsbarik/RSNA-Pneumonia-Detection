@@ -3,11 +3,11 @@ import os
 # ===============================
 # Dataset
 # ===============================
-DATA_ROOT = "rsna_dataset" # Root directory for dataset
+DATA_ROOT = "rsna_dataset"  # Root directory for dataset
 
 TRAIN_DF = os.path.join(DATA_ROOT, "image_labels.csv")  # CSV file with image labels
-DICOM_DIR = os.path.join(DATA_ROOT, "images")      # Original DICOM files
-PNG_DIR = os.path.join(DATA_ROOT, "images_png")    # Converted PNG files
+DICOM_DIR = os.path.join(DATA_ROOT, "images")  # Original DICOM files
+PNG_DIR = os.path.join(DATA_ROOT, "images_png")  # Converted PNG files
 
 USE_PNG = True  # Whether to use PNG images instead of DICOM
 
@@ -15,22 +15,16 @@ USE_PNG = True  # Whether to use PNG images instead of DICOM
 # Augmentation / Transforms
 # ===============================
 
-IMG_SIZE = 224
+IMG_SIZE = 256
 
-TRANSFORM_MODE = "imagenet" # options: "standard", "imagenet"
+TRANSFORM_MODE = "standard"  # options: "standard", "imagenet"
 
 NORMALIZATION_STATS = {
-    "standard": {
-        "mean": (0.5,),
-        "std": (0.5,)
-    },
-    "imagenet": {
-        "mean": (0.485, 0.456, 0.406),
-        "std": (0.229, 0.224, 0.225)
-    }
+    "standard": {"mean": (0.5,), "std": (0.5,)},
+    "imagenet": {"mean": (0.485, 0.456, 0.406), "std": (0.229, 0.224, 0.225)},
 }
 
-TRAIN_CROP_SCALE = (0.75, 1.0) 
+TRAIN_CROP_SCALE = (0.75, 1.0)
 HFLIP_PROB = 0.5
 ROTATE_LIMIT = 15
 
@@ -39,14 +33,14 @@ ROTATE_LIMIT = 15
 # ===============================
 TRAIN_BATCH_SIZE = 8
 VAL_BATCH_SIZE = 16
-EPOCHS = 10
+EPOCHS = 46
 LR = 1e-3
 
 # ===============================
 # Model
 # ===============================
 # Options: "baseline", "small_resnet", "hybrid_cnn", "cnn_v2", "resnet18", "resnet50"
-MODEL_NAME = "resnet18"
+MODEL_NAME = "baseline"
 NUM_OUTPUTS = 1
 
 # ===============================

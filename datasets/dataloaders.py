@@ -1,7 +1,9 @@
 from torch.utils.data import DataLoader
-from .transforms import get_train_transforms, get_eval_transforms
-from .chestxray_dataset import RSNADataset
+
 import config
+
+from .chestxray_dataset import RSNADataset
+from .transforms import get_eval_transforms, get_train_transforms
 
 
 def get_dataloaders(
